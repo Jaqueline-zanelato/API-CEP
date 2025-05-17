@@ -28,8 +28,9 @@ def tempo():
 
     temperatura = result["current"]["temp_c"]
     umidade = result["current"]["humidity"]
+    local_tempo = result["current"]["localtime"]
 
-    return render_template("paginatempo.html",temp=temperatura, umid=umidade)  
+    return render_template("paginatempo.html",temp=temperatura, umid=umidade, localtime=local_tempo)  
 
 if __name__ == '__main__':
     app.run(debug=True)
