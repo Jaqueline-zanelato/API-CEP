@@ -33,7 +33,7 @@ def tempo():
     velocidade_vento = result["current"]["vis_km"]
     pressao = result["current"]["pressure_mb"]
 
-    return render_template("paginatempo.html",temp=temperatura, umid=umidade, localtime=local_tempo, region=regiao, vis_km=velocidade_vento, pressure_mb=pressao)  
+    return render_template("monitoramento.html",temp=temperatura, umid=umidade, localtime=local_tempo, region=regiao, vis_km=velocidade_vento, pressure_mb=pressao)  
 
 if __name__ == '__main__':
     app.run(debug=True)
